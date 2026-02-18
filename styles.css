@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #51e851;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: 0.3s;
+}
+
+body.dark {
+  background: #121212;
+}
+
+.app {
+  display: flex;
+  gap: 20px;
+}
+
+.top {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+#themeToggle {
+  font-size: 20px;
+  cursor: pointer;
+}
+==
+.calculator {
+  background: #2e1e6e;
+  padding: 20px;
+  border-radius: 15px;
+  border: 3px solid #000;
+}
+
+body.dark .calculator {
+  background: #2c2c2c;
+  border-color: #fff;
+}
+
+#display {
+  width: 100%;
+  height: 60px;
+  font-size: 24px;
+  margin-bottom: 15px;
+  text-align: right;
+  padding: 10px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  height: 50px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.history {
+  width: 200px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  overflow-y: auto;
+}
+
+body.dark .history {
+  background: #1f1f1f;
+  color: #fff;
+}
+
+.history ul {
+  list-style: none;
+  padding: 0;
+}
+
+.history li {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
